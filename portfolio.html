@@ -17,30 +17,50 @@
   <body>
     <!--Шапка сайта-->
     <header class="header">
-      <a class="logo" href="./index.html"><span>Web</span> Studio </a>
-      <nav class="nav">
-        <ul class="nav-ul">
-          <li class="nav-li">
-            <a class="studia" href="./index.html">Студия</a>
+      <a class="header__logo" href="./index.html"><span>Web</span> Studio </a>
+      <nav class="header-nav">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a
+              class="header-nav__link header-nav__link--active"
+              href="./index.html"
+              >Студия</a
+            >
           </li>
-          <li class="nav-li">
-            <a class="portfolio current" href="./portfolio.html">Портфолио</a>
+          <li class="header-nav__item">
+            <a
+              class="header-nav__link header-nav__link--active"
+              href="./portfolio.html"
+              >Портфолио</a
+            >
           </li>
-          <li class="nav-li"><a href="">Контакты</a></li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="">Контакты</a>
+          </li>
         </ul>
       </nav>
-      <address>
-        <img class="img" src="./images/mail.svg" alt="mail" />
-        <a class="mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <img class="img" src="./images/fone.svg" alt="phone" />
-        <a class="fone" href="tel:+380961111111">+38 096 111 11 11</a>
+      <address class="header-address">
+        <a class="header-address__mail" href="mailto:info@devstudio.com">
+          <img
+            class="header-address__img"
+            src="./images/mail.svg"
+            alt="mail"
+          />info@devstudio.com
+        </a>
+        <a class="header-address__fone" href="tel:+380961111111">
+          <img
+            class="header-address__img"
+            src="./images/fone.svg"
+            alt="phone"
+          />+38 096 111 11 11
+        </a>
       </address>
     </header>
     <main>
       <section class="filter">
         <!--Фильтр-->
         <!--Скрытый заголовок Фильтра-->
-        <h1 class="filter-title">Фильтр</h1>
+        <h1 class="visually-hidden">Фильтр</h1>
         <div class="fil-but">
           <button type="button">Все</button>
           <button type="button">Веб-сайты</button>

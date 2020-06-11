@@ -23,6 +23,17 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /*------------------- всё, что с цветом акцента */
 .header-nav__item--active,
 span,
@@ -61,7 +72,7 @@ body,
 body {
   margin: 0px;
   width: 1200px;
-  padding: 0px 15px;
+  padding: 0px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -76,6 +87,8 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  padding-left: 15px;
+  padding-right: 15px;
 
   display: flex;
   align-items: center;
@@ -96,7 +109,6 @@ ul {
 .header-nav {
   margin-right: auto;
   margin-left: 85px;
-  
 }
 .header-nav__list {
   width: 294px;
@@ -107,7 +119,7 @@ ul {
   margin: 0;
 }
 .header-nav__item {
-  padding-top: 32px;  
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 .header-address {
@@ -136,6 +148,8 @@ ul {
   background-color: var(--title-text-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .hero-title {
@@ -165,10 +179,8 @@ ul {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-}
-.section-name {
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .section-list > ul {
@@ -225,6 +237,8 @@ button {
 .section-work {
   padding-top: 94px;
   padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   border-top: 1px solid #ececec;
 }
@@ -281,6 +295,8 @@ button {
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .team > .section-title {
   margin-top: 0;
@@ -330,6 +346,8 @@ button {
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .client-img {
@@ -351,6 +369,8 @@ button {
   background-color: #2f303a;
   letter-spacing: 0.03em;
   padding-top: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .footer-div {
   display: flex;
@@ -472,9 +492,7 @@ button {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.filter-title {
-  margin: 0;
-}
+
 .fil-but {
   text-align: center;
 }
