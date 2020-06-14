@@ -12,9 +12,6 @@
 /*-- Размер для всех блоков по размеру блока, а не контента */
 html {
   box-sizing: border-box;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 /*------------------- наследие border-box */
 *,
@@ -95,12 +92,6 @@ body,
   letter-spacing: 0.03em;
 }
 
-/*------------------ Белые заголовки */
-.hero,
-.address {
-  color: var(--primary-white-color);
-}
-
 /* -------- убираем маркеры */
 ul {
   list-style: none;
@@ -117,6 +108,7 @@ ul {
 
   padding-left: 15px;
   padding-right: 15px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 
@@ -170,26 +162,35 @@ ul {
 }
 
 /*------------------------------- Hero */
-.hero {
-  text-align: center;
-  letter-spacing: 0.06em;
+.hero__container {
   /* ЗАМЕНИТЬ НА ФОН */
-  background-color: var(--title-text-color);
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8)
+  );
+  background-image: url(../images/fonpic.jpg);
+  background-repeat: no-repeat;
+  background-position: top 80px;
+  background-size: cover;
+  max-width: 1600px;
+  min-height: 400px;
+
   padding-top: 200px;
   padding-bottom: 200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  text-align: center;
 }
 
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-
+  color: var(--primary-white-color);
   margin: 0px;
+  text-align: center;
+  letter-spacing: 0.06em;
 }
 
-.button-prim.service {
+.hero__button {
   display: inline-block;
   padding: 10px 32px;
   margin-top: 30px;
@@ -208,6 +209,7 @@ ul {
 .advantages {
   padding-top: 94px;
   padding-bottom: 94px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -274,6 +276,7 @@ button {
 .work {
   padding-top: 94px;
   padding-bottom: 94px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   border-top: 1px solid #ececec;
@@ -343,6 +346,7 @@ button {
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--secondary-bg-color);
@@ -401,6 +405,7 @@ button {
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -460,6 +465,7 @@ button {
   font-style: normal;
   display: flex;
   flex-direction: column;
+  color: var(--primary-white-color);
 }
 
 .address__link {
@@ -502,8 +508,9 @@ button {
 }
 .footer-folow__title {
   text-align: left;
-  margin-top: auto;
-  margin-bottom: auto;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--primary-white-color);
 }
 
@@ -558,7 +565,7 @@ button {
   margin: 0;
 }
 .filter__buttons {
- text-align: center;
+  text-align: center;
 }
 
 /* .only:hover {
@@ -623,7 +630,7 @@ button:hover {
   margin-right: 30px;
 }
 .filter__item:hover {
-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
