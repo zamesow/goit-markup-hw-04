@@ -9,13 +9,14 @@
   --icons-grey-color: #afb1b8;
 }
 
+/*-- Размер для всех блоков по размеру блока, а не контента */
 html {
   box-sizing: border-box;
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-
+/*------------------- наследие border-box */
 *,
 *::before,
 *::after {
@@ -41,9 +42,28 @@ img {
   overflow: hidden;
 }
 
-/*----------------------- все ссылки */
+/*-------------------- все ссылки не подчеркиваются */
 a {
   text-decoration: none;
+}
+
+/* ------------------ прячем заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ----------------все картинки масштабируем относительно размера */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /*------------------- всё, что с цветом акцента */
@@ -92,6 +112,8 @@ ul {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  padding-left: 15px;
+  padding-right: 15px;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -155,6 +177,8 @@ ul {
   background-color: var(--title-text-color);
   padding-top: 200px;
   padding-bottom: 200px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .hero-title {
@@ -252,7 +276,6 @@ button {
   padding-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
-
   border-top: 1px solid #ececec;
 }
 
@@ -406,6 +429,8 @@ button {
   background-color: #2f303a;
   letter-spacing: 0.03em;
   padding-top: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .footer__container {
   padding-left: 15px;
@@ -508,11 +533,8 @@ button {
   padding-top: 18px;
   padding-bottom: 21px;
   text-align: center;
-
-  border-top: 1px solid rgba(255, 255, 0255, 0.1);
-}
-.copy p {
   margin: 0;
+  border-top: 1px solid rgba(255, 255, 0255, 0.1);
 }
 
 /* ------------------------------ buttons */
@@ -531,11 +553,12 @@ button {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
 .filter-title {
   margin: 0;
 }
 .filter__buttons {
-  text-align: center;
+ text-align: center;
 }
 
 /* .only:hover {
@@ -582,6 +605,7 @@ button:hover {
 .filter__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding-left: 0px;
   margin-top: 50px;
   margin-bottom: 0px;
@@ -591,6 +615,7 @@ button:hover {
   text-align: left;
   margin-bottom: 30px;
 }
+
 .filter__item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
@@ -598,7 +623,7 @@ button:hover {
   margin-right: 30px;
 }
 .filter__item:hover {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
