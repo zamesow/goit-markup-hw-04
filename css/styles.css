@@ -165,11 +165,13 @@ ul {
 .hero {
   background-image: linear-gradient(
     to right,
-    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8);
+    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8)
+  );
   background-image: url(../images/fonpic.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
   max-width: 1600px;
   min-height: 600px;
   display: flex;
@@ -389,7 +391,8 @@ button {
 }
 .team__text {
   font-weight: 400;
-  font-size: 1.2;
+  font-size: 16px;
+  line-height: 1.2;
   color: var(--primary-text-color);
   margin-bottom: 16px;
   text-align: center;
