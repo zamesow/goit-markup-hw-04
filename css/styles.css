@@ -143,29 +143,43 @@ ul {
   padding-top: 32px;
   padding-bottom: 32px;
 }
+
 .header-address {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
 }
-.header-address__mail,
-.header-address__fone {
+
+.header-address__link {
   color: var(--primary-text-color);
   font-style: normal;
-  display: flex;
+  display: inline-flex;
   align-items: center;
 }
-.header-address__mail {
-  margin-right: 30px;
-}
-.header-address__img {
+
+.header-address__link::before {
+  content: '';
   margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.header-address__link--mail::before {
+  background-image: url('../images/mail.svg');
+  width: 16px;
+  height: 11px;
+}
+
+.header-address__link--fone::before {
+  background-image: url('../images/fone.svg');
+  width: 10px;
+  height: 15px;
+  margin-left: 30px;
 }
 
 /*------------------------------- Hero */
 .hero {
   background-image: linear-gradient(
       to right,
-      rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8)
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
     ),
     url('../images/fonpic.jpg');
   background-repeat: no-repeat;
@@ -247,48 +261,30 @@ ul {
   margin-right: 30px;
 }
 /* ------------------------- features icons */
-.antenna::before {
+.features__item::before {
   content: '';
   display: block;
   height: 120px;
+  background-color: var(--secondary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.feauters__item--antenna::before {
   background-image: url(../images/antenna.svg);
-  background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
 }
 
-.clock::before {
-  content: '';
-  display: block;
-  height: 120px;
+.feauters__item--clock::before {
   background-image: url(../images/clock.svg);
-  background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
 }
 
-.diagramm::before {
-  content: '';
-  display: block;
-  height: 120px;
+.feauters__item--diagramm::before {
   background-image: url(../images/diagram.svg);
-  background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
 }
 
-.astronaut::before {
-  content: '';
-  display: block;
-  height: 120px;
-  background-image: url(../images/cosmo.svg);
-  background-color: var(--secondary-bg-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
+.feauters__item--astronaut::before {
+  background-image: url(../images/astronaut.svg);
 }
 /* ----------------------- WORK SECTION */
 .work__subtitle {
@@ -510,7 +506,7 @@ button {
 .address__link {
   color: rgba(255, 255, 255, 0.6);
 }
-.email {
+.address__link--email {
   margin-top: 9px;
   margin-bottom: 9px;
 }
