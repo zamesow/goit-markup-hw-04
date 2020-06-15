@@ -1,5 +1,5 @@
-/* Шрифты index: Raleway - 400, Roboto - 900, 700, 500, 400 */
-/* Шрифты portfolio: Raleway - 400, Roboto - 700, 500, 400 */
+/*-- Шрифты index: Raleway - 400, Roboto - 900, 700, 500, 400 --*/
+/*-- Шрифты portfolio: Raleway - 400, Roboto - 700, 500, 400 --*/
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -69,7 +69,7 @@ span,
 .header-nav__link:hover,
 .header-nav__link:focus,
 .address__link:focus,
-.advantages__img:focus,
+.features__img:focus,
 .team-soc__item:hover,
 .team-soc__item:focus,
 .clients__link:hover,
@@ -162,21 +162,24 @@ ul {
 }
 
 /*------------------------------- Hero */
-.hero__container {
-  /* ЗАМЕНИТЬ НА ФОН */
+.hero {
   background-image: linear-gradient(
     to right,
-    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8)
-  );
+    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8);
   background-image: url(../images/fonpic.jpg);
   background-repeat: no-repeat;
-  background-position: top 80px;
+  background-position: center;
   background-size: cover;
   max-width: 1600px;
-  min-height: 400px;
+  min-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  padding-top: 200px;
-  padding-bottom: 200px;
+.hero__container {
   text-align: center;
 }
 
@@ -188,6 +191,7 @@ ul {
   margin: 0px;
   text-align: center;
   letter-spacing: 0.06em;
+  max-width: 700px;
 }
 
 .hero__button {
@@ -206,7 +210,7 @@ ul {
 }
 
 /*------------ преимущества, команда, фильтр */
-.advantages {
+.features {
   padding-top: 94px;
   padding-bottom: 94px;
   width: 1200px;
@@ -214,32 +218,32 @@ ul {
   margin-right: auto;
 }
 
-.advantages__container {
+.features__container {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.advantages__title {
+.features__title {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.advantages__list {
+.features__list {
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.advantages__item {
+.features__item {
   font-size: 0px;
   margin: 0px;
   width: calc((100% - 90px) / 4);
 }
-.advantages__item:not(:last-child) {
+.features__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.advantages__img,
+.features__img,
 button {
   background-color: var(--secondary-bg-color);
   font-family: inherit;
@@ -247,7 +251,7 @@ button {
   border-radius: 4px;
   margin: 0px;
 }
-.advantages__img:hover {
+.features__img:hover {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -263,7 +267,7 @@ button {
   color: var(--primary-white-color);
 }
 
-.advantages__text {
+.features__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -434,14 +438,16 @@ button {
   background-color: #2f303a;
   letter-spacing: 0.03em;
   padding-top: 48px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
+
 .footer__container {
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   align-items: baseline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
 }
 .footer__logo {
   margin-bottom: 10px;
@@ -449,13 +455,11 @@ button {
 }
 
 /*-------------------- адрес в футере */
+
 .footer-address-cont {
   margin-bottom: 28px;
-  text-align: left;
-  display: flex;
   flex-direction: column;
   margin-right: 69px;
-  width: 231px;
 }
 
 .address {
@@ -476,41 +480,27 @@ button {
   margin-bottom: 9px;
 }
 
+/* ----------------------- Присоединяйтесь */
 .footer-soc-links__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: left;
-  padding: 0px;
+
   margin-bottom: 21px;
   color: var(--primary-white-color);
 }
-/* ----------------------- Присоединяйтесь */
+
 .footer-soc-links__list {
   margin-top: 21px;
-  width: 206px;
 }
-.footer-soc-links__item {
-  display: flex;
-  padding-left: 0px;
-  margin-bottom: 24px;
-}
+
 /* --------------------------- Рассылка */
 .footer-folow {
-  margin-bottom: 50px;
-  padding: 0px;
-}
-.footer-folow__cont {
-  width: 570px;
-  display: flex;
-  justify-content: space-between;
-}
-.footer-folow__title {
-  text-align: left;
-  width: 1200px;
   margin-left: auto;
-  margin-right: auto;
+}
+
+.footer-folow__title {
   color: var(--primary-white-color);
 }
 
@@ -518,8 +508,7 @@ button {
   min-width: 109px;
   height: 50px;
   padding: 9px 28px;
-  display: flex;
-  align-items: center;
+
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -538,7 +527,7 @@ button {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.4);
   padding-top: 18px;
-  padding-bottom: 21px;
+  padding-bottom: 20px;
   text-align: center;
   margin: 0;
   border-top: 1px solid rgba(255, 255, 0255, 0.1);
