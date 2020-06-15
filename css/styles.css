@@ -509,16 +509,22 @@ button {
 }
 
 .footer-folow__button {
-  min-width: 109px;
+  display: inline-flex;
   height: 50px;
   padding: 9px 28px;
-
+  text-decoration: none;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
-.button-fly > img {
+
+.footer-folow__button::after {
+  width: 24px;
+  height: 24px;
   margin-left: 10px;
+  background-image: url(../images/icon-send.svg);
+  content: '';
 }
+
 .footer-folow__button:focus {
   color: var(--primary-text-color);
 }
