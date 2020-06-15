@@ -164,10 +164,10 @@ ul {
 /*------------------------------- Hero */
 .hero {
   background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8),
-    url(../images/fonpic.jpg)
-  );
+      to right,
+      rgba(47, 48, 58, 0.8) rgba(47, 48, 58, 0.8)
+    ),
+    url('../images/fonpic.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -246,20 +246,51 @@ ul {
 .features__item:not(:last-child) {
   margin-right: 30px;
 }
-
-.features__img,
-button {
+/* ------------------------- features icons */
+.antenna::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-image: url(../images/antenna.svg);
   background-color: var(--secondary-bg-color);
-  font-family: inherit;
-  padding: 25px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 4px;
-  margin: 0px;
-}
-.features__img:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-white-color);
 }
 
+.clock::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-image: url(../images/clock.svg);
+  background-color: var(--secondary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.diagramm::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-image: url(../images/diagram.svg);
+  background-color: var(--secondary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.astronaut::before {
+  content: '';
+  display: block;
+  height: 120px;
+  background-image: url(../images/cosmo.svg);
+  background-color: var(--secondary-bg-color);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+/* ----------------------- WORK SECTION */
 .work__subtitle {
   font-weight: bold;
   font-size: 14px;
@@ -515,6 +546,7 @@ button {
   text-decoration: none;
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+  align-items: center;
 }
 
 .footer-folow__button::after {
@@ -544,12 +576,12 @@ button {
 }
 
 /* ------------------------------ buttons */
-.button-prim,
-.button-sec,
-.button-fly {
-  color: var(--primary-white-color);
-  background-color: var(--accent-color);
-  letter-spacing: 0.06em;
+button {
+  background-color: var(--secondary-bg-color);
+  font-family: inherit;
+  padding: 25px 100px;
+  border-radius: 4px;
+  margin: 0px;
 }
 
 /* -------- PORTFOLIO ----------- */
