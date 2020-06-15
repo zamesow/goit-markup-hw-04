@@ -64,14 +64,14 @@ img {
 }
 
 /*------------------- всё, что с цветом акцента */
-.header-nav__item--active,
-span,
+.logo,
+.header-nav .header-nav__link--active,
 .header-nav__link:hover,
 .header-nav__link:focus,
 .address__link:focus,
 .features__img:focus,
-.team-soc__item:hover,
-.team-soc__item:focus,
+.soc-links__item:hover,
+.soc-links__item:focus,
 .clients__link:hover,
 .clients__link:focus,
 .header-address__mail:hover,
@@ -81,6 +81,10 @@ span,
 button:focus,
 .filter__item:focus {
   color: var(--accent-color);
+}
+
+.footer-soc-links__item:hover {
+  background-color: var(--accent-color);
 }
 
 /*------------------- основной фон */
@@ -119,11 +123,15 @@ ul {
 
 /* Logo */
 .logo {
-  color: #000000;
+  color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+}
+
+.logo__studio {
+  color: #000000;
 }
 
 /*--------------------- ссылки навигации */
@@ -146,6 +154,7 @@ ul {
 
 .header-address {
   display: inline-flex;
+  align-items: center;
 }
 
 .header-address__link {
@@ -159,18 +168,18 @@ ul {
   content: '';
   margin-right: 10px;
   background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-position: center;
 }
 
 .header-address__link--mail::before {
   background-image: url('../images/mail.svg');
-  width: 16px;
-  height: 11px;
 }
 
 .header-address__link--fone::before {
   background-image: url('../images/fone.svg');
-  width: 10px;
-  height: 15px;
   margin-left: 30px;
 }
 
@@ -400,6 +409,7 @@ button {
   justify-content: center;
   margin-top: 0px;
   padding-left: 0px;
+  font-size: 0;
 }
 .team__item:not(:last-child) {
   margin-right: 30px;
@@ -409,6 +419,9 @@ button {
   width: calc((100% - 90px) / 4);
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .team__subtitle {
@@ -425,18 +438,77 @@ button {
   margin-bottom: 16px;
   text-align: center;
 }
-
-.team-soc {
-  display: flex;
+/* ----------------------------SOCIAL LINKS */
+.soc-links {
+  text-align: center;
   padding-left: 0px;
   margin-bottom: 24px;
 }
 
-.team-soc__item:not(:last-child) {
+.soc-links__item,
+.footer-soc-links__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 50%;
+}
+
+.soc-links__item:not(:last-child),
+.footer-soc-links__item:not(:last-child) {
   margin-right: 10px;
 }
 
-/* -------------------------- Клиенты */
+.soc-links__item,
+.footer-soc-links__item {
+  content: '';
+  width: 44px;
+  height: 44px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 50%;
+}
+
+.soc-links__item--instagram {
+  background-image: url('../images/instagram.svg');
+}
+.soc-links__item--twitter {
+  background-image: url('../images/twitter.svg');
+}
+.soc-links__item--facebook {
+  background-image: url('../images/facebook.svg');
+}
+.soc-links__item--linkedin {
+  background-image: url('../images/linkedin.svg');
+}
+
+/* ----------------------- FOOTER SOCIAL LINKS */
+
+.footer-soc-links {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+}
+
+.footer-soc-links__item {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-links__item--instagram {
+  background-image: url('../images/instagram-2.svg');
+}
+.footer-soc-links__item--twitter {
+  background-image: url('../images/twitter-2.svg');
+}
+.footer-soc-links__item--facebook {
+  background-image: url('../images/facebook-2.svg');
+}
+.footer-soc-links__item--linkedin {
+  background-image: url('../images/linkedin-2.svg');
+}
+
+/* --------------------------------- Клиенты */
+
 .clients {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -480,7 +552,7 @@ button {
   margin-right: auto;
   width: 1200px;
 }
-.footer__logo {
+.logo__studio--inverse {
   margin-bottom: 10px;
   color: var(--primary-white-color);
 }
@@ -512,6 +584,10 @@ button {
 }
 
 /* ----------------------- Присоединяйтесь */
+.footer-soc-links {
+  font-size: 0;
+}
+
 .footer-soc-links__title {
   font-weight: 700;
   font-size: 14px;
