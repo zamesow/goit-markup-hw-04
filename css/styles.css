@@ -72,8 +72,8 @@ img {
 .features__img:focus,
 .soc-links__item:hover,
 .soc-links__item:focus,
-.clients__link:hover,
-.clients__link:focus,
+.clients__item:focus,
+.clients__icon:hover,
 .header-address__mail:hover,
 .header-address__mail:focus,
 .header-address__fone:hover,
@@ -81,9 +81,10 @@ img {
 button:focus,
 .filter__item:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 
-.footer-soc-links__item:hover {
+.soc-links__item:hover {
   background-color: var(--accent-color);
 }
 
@@ -164,23 +165,31 @@ ul {
   align-items: center;
 }
 
+.header-address__link--mail {
+  margin-right: 30px;
+}
+
 .header-address__link::before {
   content: '';
   margin-right: 10px;
   background-repeat: no-repeat;
   width: 16px;
-  height: 16px;
+  height: 12px;
   background-size: contain;
   background-position: center;
 }
 
+.header-address__link--fone::before {
+  width: 10px;
+  height: 15px;
+}
+
 .header-address__link--mail::before {
-  background-image: url('../images/mail.svg');
+  background-image: url('../images/mail-opti.svg');
 }
 
 .header-address__link--fone::before {
-  background-image: url('../images/fone.svg');
-  margin-left: 30px;
+  background-image: url('../images/fone-opti.svg');
 }
 
 /*------------------------------- Hero */
@@ -190,7 +199,7 @@ ul {
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url('../images/fonpic.jpg');
+    url('../images/fonpic-opti.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -281,19 +290,19 @@ ul {
 }
 
 .feauters__item--antenna::before {
-  background-image: url(../images/antenna.svg);
+  background-image: url(../images/antenna-opti.svg);
 }
 
 .feauters__item--clock::before {
-  background-image: url(../images/clock.svg);
+  background-image: url(../images/clock-opti.svg);
 }
 
 .feauters__item--diagramm::before {
-  background-image: url(../images/diagram.svg);
+  background-image: url(../images/diagram-opti.svg);
 }
 
 .feauters__item--astronaut::before {
-  background-image: url(../images/astronaut.svg);
+  background-image: url(../images/astronaut-opti.svg);
 }
 /* ----------------------- WORK SECTION */
 .work__subtitle {
@@ -360,7 +369,7 @@ ul {
 }
 
 .work__subtitle,
-.footer-links__title,
+.footer-soc-links__title,
 .folow__title {
   font-weight: 700;
   font-size: 14px;
@@ -445,66 +454,40 @@ button {
   margin-bottom: 24px;
 }
 
-.soc-links__item,
-.footer-soc-links__item {
+.soc-links__item {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 50%;
 }
 
-.soc-links__item:not(:last-child),
-.footer-soc-links__item:not(:last-child) {
+.soc-links__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.soc-links__item,
-.footer-soc-links__item {
+.soc-links__item {
   content: '';
   width: 44px;
   height: 44px;
-  background-repeat: no-repeat;
-  background-position: center;
-
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
 }
 
-.soc-links__item--instagram {
-  background-image: url('../images/instagram.svg');
-}
-.soc-links__item--twitter {
-  background-image: url('../images/twitter.svg');
-}
-.soc-links__item--facebook {
-  background-image: url('../images/facebook.svg');
-}
-.soc-links__item--linkedin {
-  background-image: url('../images/linkedin.svg');
+.soc-links__icon {
+  width: 20px;
+  height: 20px;
+  border: none;
+  fill: var(--icons-grey-color);
 }
 
-/* ----------------------- FOOTER SOCIAL LINKS */
-
-.footer-soc-links {
-  padding: 0;
-  margin: 0;
-  font-size: 0;
+.soc-links__item:hover {
+  color: var(--accent-color);
 }
 
-.footer-soc-links__item {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-soc-links__item--instagram {
-  background-image: url('../images/instagram-2.svg');
-}
-.footer-soc-links__item--twitter {
-  background-image: url('../images/twitter-2.svg');
-}
-.footer-soc-links__item--facebook {
-  background-image: url('../images/facebook-2.svg');
-}
-.footer-soc-links__item--linkedin {
-  background-image: url('../images/linkedin-2.svg');
+.soc-links__item:hover .soc-links__icon {
+  fill: var(--primary-white-color);
 }
 
 /* --------------------------------- Клиенты */
@@ -522,18 +505,39 @@ button {
   padding-right: 15px;
 }
 
-.clients__logo {
-  border: 1px solid var(--icons-grey-color);
-  border-radius: 4px;
-  width: 170px;
-  height: 90px;
-  padding: 19px 41px;
-}
 .clients__list {
   display: flex;
   justify-content: space-between;
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0px;
-  margin: 0;
+}
+
+.client__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__item {
+  width: calc((100% - 5 * 30px) / 6);
+  height: 90px;
+  border: 1px solid var(--icons-grey-color);
+  border-radius: 4px;
+}
+
+.clients__link {
+  width: 168px;
+  height: 88px;
+}
+
+.clients__item:hover {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
+}
+
+.clients__icon {
+  fill: var(--icons-grey-color);
+  margin: auto;
 }
 
 /* -------------------------- Футер */
@@ -583,23 +587,35 @@ button {
   margin-bottom: 9px;
 }
 
-/* ----------------------- Присоединяйтесь */
+/* ----------------------- FOOTER SOCIAL LINKS */
+
 .footer-soc-links {
+  padding: 0;
+  margin: 0;
   font-size: 0;
 }
 
+.soc-links__item--footer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 .footer-soc-links__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: left;
 
-  margin-bottom: 21px;
+  padding: 0;
+  margin-bottom: 20px;
   color: var(--primary-white-color);
 }
 
-.footer-soc-links__list {
-  margin-top: 21px;
+.soc-links--footer {
+  margin: 0;
+}
+
+.soc-links__icon--footer {
+  fill: var(--primary-white-color);
 }
 
 /* --------------------------- Рассылка */
@@ -625,7 +641,7 @@ button {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  background-image: url(../images/icon-send.svg);
+  background-image: url(../images/icon-send-opti.svg);
   content: '';
 }
 
