@@ -73,7 +73,6 @@ img {
 .soc-links__item:hover,
 .soc-links__item:focus,
 .clients__item:focus,
-.clients__icon:hover,
 .header-address__mail:hover,
 .header-address__mail:focus,
 .header-address__fone:hover,
@@ -128,7 +127,7 @@ ul {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.19;
 }
 
 .logo__studio {
@@ -345,7 +344,7 @@ ul {
 .clients__title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
   margin-top: 0;
   margin-bottom: 50px;
@@ -436,13 +435,13 @@ button {
 .team__subtitle {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   text-align: center;
 }
 .team__text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.19;
   color: var(--primary-text-color);
   margin-bottom: 16px;
   text-align: center;
@@ -507,13 +506,13 @@ button {
 
 .clients__list {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0px;
 }
 
-.client__item:not(:last-child) {
+.clients__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -524,20 +523,51 @@ button {
   border-radius: 4px;
 }
 
-.clients__link {
-  width: 168px;
-  height: 88px;
-}
-
 .clients__item:hover {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
   border-radius: 4px;
 }
 
+.clients__item:hover .clients__icon {
+  fill: var(--accent-color);
+}
+
+.clients__link {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .clients__icon {
   fill: var(--icons-grey-color);
-  margin: auto;
+}
+.clients__icon--one {
+  width: 45px;
+  height: 50px;
+}
+.clients__icon--two {
+  width: 40px;
+  height: 52px;
+}
+.clients__icon--three {
+  width: 41px;
+  height: 43px;
+}
+.clients__icon--four {
+  width: 80px;
+  height: 43px;
+}
+.clients__icon--five {
+  width: 59px;
+  height: 47px;
+}
+.clients__icon--six {
+  width: 89px;
+  height: 46px;
 }
 
 /* -------------------------- Футер */
