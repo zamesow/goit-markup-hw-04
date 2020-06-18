@@ -648,16 +648,13 @@ button {
   align-items: center;
 }
 
-.footer-folow__button::after {
-  width: 24px;
-  height: 24px;
-  margin-left: 10px;
-  background-image: url(../images/icon-send-opti.svg);
-  content: '';
-}
-
 .footer-folow__button:focus {
   color: var(--primary-white-color);
+}
+
+.icon-send {
+  margin-left: 10px;
+  fill: var(--primary-white-color);
 }
 
 /*------------------------------ Copyrights */
